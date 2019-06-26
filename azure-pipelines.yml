@@ -11,12 +11,11 @@ pool:
 
 steps:
 - script:
+    pwd
     zip -r src.zip ./src 
     cp src.zip '$(Build.ArtifactStagingDirectory)/.'
-    ls -al
-    ls '$(Build.ArtifactStagingDirectory)/.'
-    pwd
-
+    ls -la '$(Build.ArtifactStagingDirectory)/.'
+    
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
