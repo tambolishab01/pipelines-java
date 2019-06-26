@@ -14,6 +14,7 @@ steps:
     pwd
     zip -r src.zip ./src 
     cp src.zip '$(Build.ArtifactStagingDirectory)/.'
+    cp -r ./src '$(Build.ArtifactStagingDirectory)/.'
     ls -la '$(Build.ArtifactStagingDirectory)/.'
     
 - task: PublishBuildArtifacts@1
