@@ -10,7 +10,7 @@ pool:
   name: 'newagentpool'
 
 steps:
-- script:
+- script: |
     pwd
     zip -r src.zip ./src 
     cp src.zip '$(Build.ArtifactStagingDirectory)/.'
