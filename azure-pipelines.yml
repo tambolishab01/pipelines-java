@@ -13,6 +13,7 @@ steps:
 - script:
     zip -r src.zip ./src 
     cp src.zip '$(Build.ArtifactStagingDirectory)/.'
+    ls -al
     ls '$(Build.ArtifactStagingDirectory)/.'
     pwd
 
