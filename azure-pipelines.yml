@@ -10,4 +10,4 @@ pool:
   name: 'newagentpool'
 
 steps:
-- bash: echo "Hello world"
+- bash: echo "Hello world" >> /tmp/new.txt
