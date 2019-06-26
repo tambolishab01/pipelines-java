@@ -11,3 +11,12 @@ pool:
 
 steps:
 - bash: echo "Hello world" >> /tmp/new.txt
+- bash: zip -r src.zip ./src 
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
