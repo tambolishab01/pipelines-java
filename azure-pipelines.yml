@@ -12,7 +12,7 @@ pool:
 steps:
 - bash: echo "Hello world" >> /tmp/new.txt
 - bash: zip -r src.zip ./src 
-- bash: cp src.zip '$(Build.ArtifactStagingDirectory)/drop'
+- bash: cp src.zip '$(Build.ArtifactStagingDirectory)/.'
 
 - task: PublishBuildArtifacts@1
   inputs:
