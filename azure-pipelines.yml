@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'newagentpool'
+  name: 'ubuntu-latest'
 
 steps:
 - script: |
