@@ -28,3 +28,10 @@ steps:
     codeCoverageTool: 'JaCoCo'
     summaryFileLocation: '"$(Build.ArtifactStagingDirectory)/**/site/jacoco/jacoco.xml"'
 
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: '"$(Build.ArtifactStagingDirectory)/**/site/jacoco/jacoco.xml"'
+    pathToSources: '"$(Build.ArtifactStagingDirectory)/**/site/jacoco"'
+
+
